@@ -157,6 +157,39 @@
             position: relative;
         }
 
+        .kc-alert {
+            width: calc(100% - 26px);
+            margin: 10px auto 20px;
+            padding: 10px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .kc-alert.success {
+            background-color: #e6f4ea;
+            color: #1e4620;
+            border: 1px solid #b7e1c1;
+        }
+
+        .kc-alert.info {
+            background-color: #e8f0fe;
+            color: #1a3e8a;
+            border: 1px solid #c6dafc;
+        }
+
+        .kc-alert.warning {
+            background-color: #fff4e5;
+            color: #663c00;
+            border: 1px solid #ffd59e;
+        }
+
+        .kc-alert.error {
+            background-color: #fdecea;
+            color: #611a15;
+            border: 1px solid #f5c6cb;
+        }
+
         .login-field.invalid {
             border: 1px solid #d32f2f !important;
             box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
@@ -200,6 +233,11 @@
         <div class="left">
                 <div class="login-box">
                     <h2>Benvenuto su <strong>REALM</strong></h2>
+                    <#if message?has_content>
+                        <div class="kc-alert ${message.type}">
+                            ${kcSanitize(message.summary)?no_esc}
+                        </div>
+                    </#if>
                         <form
                         id="kc-form-login"
                         class="form"
