@@ -1,0 +1,6 @@
+{
+    "themes": [{
+        "name" : "realm-theme",
+        "types": [ "login", "email"]
+    }]
+}

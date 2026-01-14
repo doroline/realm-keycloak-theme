@@ -1,0 +1,55 @@
+variables:
+  ARTIFACT_NAME: realm-theme.jar
+  COMPOSE_HOME: /home/realm/docker/infrastructure
+
+deploy-dev:
+  stage: deploy
+  tags:
+    - shell
+    - realm
+    - dev
+  dependencies:
+    - build
+  script:
+    - cp -f target/$ARTIFACT_NAME $COMPOSE_HOME/keycloak/providers
+    - cd $COMPOSE_HOME
+    - docker compose up --force-recreate -d keycloak
+  environment:
+    name: dev
+  rules:
+    - if: $CI_COMMIT_BRANCH == "deploy/dev"
+      when: always
+
+deploy-test:
+  stage: deploy
+  tags:
+    - shell
+    - realm
+    - test
+  dependencies:
+    - build
+  script:
+    - cp -f target/$ARTIFACT_NAME $COMPOSE_HOME/keycloak/providers
+    - cd $COMPOSE_HOME
+    - docker compose up --force-recreate -d keycloak
+  environment:
+    name: test
+  rules:
+    - if: $CI_COMMIT_BRANCH == "deploy/test"
+      when: always
+
+build:
+  image: eclipse-temurin:21-alpine
+  stage: build
+  tags:
+    - docker
+  script:
+    - mkdir /app target
+    - ln -s $PWD /app/theme
+    - jar cvf target/$ARTIFACT_NAME -C /app ./theme/realm-theme -C /app/theme ./META-INF
+  artifacts:
+    paths:
+      - target/
+  rules:
+    - if: $CI_COMMIT_BRANCH =~ /^deploy/
+      when: always

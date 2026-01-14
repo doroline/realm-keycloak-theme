@@ -1,0 +1,332 @@
+body,
+html {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+  font-size: 14px;
+  color: rgba(0, 0, 0, .87);
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.login-content {
+  background-size: cover;
+  background-position: center;
+  min-height: 100%;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-content .box {
+  width: 448px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+  margin: auto;
+}
+
+.login-content .box .box-container {
+  width: 100%;
+  padding-left: 32px;
+}
+
+.login-content .box .logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.login-content .box .application-name {
+  width: 270px;
+  font-family: Muli;
+  font-size: 24px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.83;
+  letter-spacing: -0.4px;
+  text-align: left;
+  color: #0055B8;
+  margin-left: 32px;
+  margin-top: 40px;
+}
+
+.login-content .box .form {
+  margin-left: 32px;
+  margin-top: 55px;
+  margin-bottom: -55px;
+}
+
+.login-content .box .login-field {
+  width: 320px;
+  height: 24px;
+  font-family: Muli;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: -0.4px;
+  text-align: left;
+  color: #000000;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  background-color: #fff;
+}
+
+.login-content .box input[type="text"]:focus,
+.login-content .box input[type="password"]:focus {
+  border-bottom: 2px solid #0055B8;
+}
+
+.login-content .box input[type="text"]:-webkit-autofill,
+.login-content .box input[type="password"]:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px white inset;
+}
+
+.login-content .box .submit {
+  width: 320px;
+  height: 36px;
+  border-radius: 2px;
+  background-color: #00754a;
+  font-family: Muli;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  border-style: none;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.login-content .box .visibility {
+  position: relative;
+  left: 296px;
+  top: 20px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.54;
+  border: none;
+}
+
+.login-content .box .copyright {
+  min-width: 320px;
+  text-align: center;
+  font-size: 14px;
+  opacity: .54;
+  position: relative;
+  top: 50px;
+}
+
+.message-text {
+  width: 322px;
+  height: 22px;
+  opacity: 0.87;
+  font-family: Muli;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.3;
+  letter-spacing: -0.4px;
+  text-align: left;
+  color: #b8082a;
+  border: 0px;
+  position: relative;
+  top: 180px;
+  left: 64px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.identity-providers {
+  width: 270px;
+  font-family: Muli;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.83;
+  letter-spacing: -0.4px;
+  text-align: left;
+  color: #0055B8;
+  margin-left: 32px;
+  margin-top: 20px;
+}
+
+.login-content .box .social-link-style {
+  width: 320px;
+  height: 36px;
+  border-radius: 2px;
+  background-color: var(--white);
+  font-family: Muli;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #00754a;
+  border-style: solid;
+  border-color: #00754a;
+  margin-top: 0px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.login-content .box .para {
+  font-family: Muli;
+  font-size: 14px;
+  margin-left: 30px;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* MOBILE FIRST */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 100%;
+}
+
+.left,
+.right {
+  width: 100%;
+}
+
+.left {
+  order: 2;
+  /* il form sotto al logo su mobile */
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.right {
+  order: 1;
+  background-color: #172655;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+
+.login-box {
+  width: 100%;
+  max-width: 350px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.login-box input[type="email"],
+.login-box input[type="password"],
+.login-box input[type="text"],
+.login-field {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: #172655;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.input-container .visibility {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  cursor: pointer;
+  color: #172655;
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #666;
+}
+
+.contatti {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #172655;
+  text-align: center;
+}
+
+/* ------------------------------- */
+/* DESKTOP VERSION (>768px)        */
+/* ------------------------------- */
+
+@media (min-width: 768px) {
+
+  .container {
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .left,
+  .right {
+    width: 50%;
+    height: 100vh;
+  }
+
+  .left {
+    order: 1;
+    align-items: center;
+  }
+
+  .right {
+    order: 2;
+  }
+
+  .login-box {
+    max-width: 400px;
+  }
+
+  .contatti {
+    position: absolute;
+    bottom: 40px;
+  }
+}
